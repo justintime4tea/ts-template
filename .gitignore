@@ -2,8 +2,7 @@
 coverage
 node_modules
 .env-*
-docs/esdoc
-docs/jsdoc
+docs/typedoc/*
 *.sh
 npm-debug.log
 dist

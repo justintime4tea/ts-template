@@ -2,17 +2,25 @@
   "name": "ts-template",
   "version": "0.1.0",
   "description": "A Typescript template project for spinning up new projects quickly.",
-  "main": "dist/main.js",
+  "main": "dist/src/main.js",
+  "typings": "./dist/src/main.d.ts",
   "scripts": {
     "clean": "rimraf dist/*",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "test": "nyc mocha dist/test",
+    "test-watch": "nodemon --exec nyc --reporter=lcov --reporter=text --reporter=html mocha dist/test",
+    "typedoc": "typedoc --out ./docs/typedoc/ ./src/",
+    "api-extractor": "api-extractor run --local --verbose",
+    "api-documenter": "api-documenter markdown -i ./docs/input/ -o ./docs/markdown/",
+    "gen-docs": "npm-run-all api-extractor api-documenter typedoc",
     "tsc": "tsc",
     "tsc-watch": "tsc -p tsconfig.json --watch",
     "build": "npm-run-all clean lint tsc",
     "dev:start": "npm-run-all build start",
-    "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
-    "start": "node .",
-    "test": "nyc mocha dist/test"
+    "dev:watch": "npm-run-all --parallel tsc-watch test-watch",
+    "dev:debug": "npm-run-all build debug",
+    "debug": "nodemon --inspect --watch src -e ts,ejs --exec npm run dev:start",
+    "start": "node ."
   },
   "nyc": {
     "extension": [
@@ -20,7 +28,10 @@
       ".tsx"
     ],
     "exclude": [
-      "**/*.d.ts"
+      "**/*.d.ts",
+      "**/*.spec.ts",
+      "coverage/*",
+      "docs/*"
     ],
     "reporter": [
       "html"
@@ -45,6 +56,8 @@
     "dotenv": "^8.0.0"
   },
   "devDependencies": {
+    "@microsoft/api-documenter": "^7.3.4",
+    "@microsoft/api-extractor": "^7.2.2",
     "@microsoft/tsdoc": "^0.12.9",
     "@salesforce/ts-sinon": "^1.0.6",
     "@types/chai": "^4.1.7",
@@ -66,6 +79,7 @@
     "source-map-support": "^0.5.12",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.5.2"
   }
 }

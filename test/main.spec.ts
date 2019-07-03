@@ -14,7 +14,7 @@ describe('HelloWorld', () => {
 
   beforeEach(() => (helloWorld = new HelloWorld()));
 
-  describe('Say hi', () => {
+  describe('#greet', () => {
     it('should greet person', () => {
       const result = helloWorld.greet('John Doe');
       result.should.equal('Hello John Doe!');
