@@ -1,0 +1,9 @@
+.nyc_output
+coverage
+node_modules
+.env-*
+docs/esdoc
+docs/jsdoc
+*.sh
+npm-debug.log
+dist

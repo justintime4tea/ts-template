@@ -1,0 +1,21 @@
+[Unit]
+Description=Typescript Template
+Documentation=https://github.com/justintime4tea/ts-template
+After=syslog.target network.target
+
+[Service]
+Environment=NODE_ENV=development
+Environment=LOG_LEVEL=7
+Type=simple
+User=nobody
+Group=nobody
+ExecStart=/usr/local/bin/node /usr/src/app/dist/src/main.js
+Restart=on-failure
+RestartSec=5
+StartLimitBurst=5
+StartLimitInterval=0
+WorkingDirectory=/usr/src/app/dist/
+SyslogIdentifier=ts-template
+
+[Install]
+WantedBy=multi-user.target
