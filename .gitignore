@@ -5,3 +5,5 @@ docs/typedoc/*
 *.sh
 npm-debug.log
 dist
+.env.local
+.env.*.local

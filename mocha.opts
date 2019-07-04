@@ -1,5 +1,5 @@
-dist/test
+dist/test/**/*.spec.js
 --require ts-node/register # replace with ts-node/register/transpile-only if you have custom types
 --require source-map-support/register
---require dotenv/config .env.test
+--require dotenv-flow/config
 --recursive
