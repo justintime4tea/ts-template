@@ -1,9 +1,9 @@
 // TODO: Migrate this test boilerplate to somewhere else
 import * as chai from 'chai';
+import Main from 'main';
 import 'mocha';
 import 'sinon';
 import {default as sinonChai} from 'sinon-chai';
-import {Main} from '../src/main';
 
 chai.use(sinonChai);
 chai.should();

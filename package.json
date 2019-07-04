@@ -10,9 +10,9 @@
   "scripts": {
     "clean": "rimraf dist/{src,test}",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
-    "test": "cross-env NODE_ENV=test nyc mocha dist/test --require dotenv-flow/config",
+    "test": "cross-env NODE_ENV=test nyc mocha dist/test -r dotenv-flow/config -r ts-node/register -r tsconfig-paths/register",
     "travis": "npm-run-all build test",
-    "test-watch": "cross-env NODE_ENV=test nodemon --exec nyc --reporter=lcov --reporter=text --reporter=html mocha dist/test --require dotenv-flow/config",
+    "test-watch": "cross-env NODE_ENV=test nodemon --exec nyc --reporter=lcov --reporter=text --reporter=html mocha dist/test -r dotenv-flow/config -r ts-node/register -r tsconfig-paths/register",
     "typedoc": "typedoc --out ./docs/typedoc/ ./src/",
     "api-extractor": "api-extractor run --local --verbose",
     "api-documenter": "api-documenter markdown -i ./docs/input/ -o ./docs/markdown/",
@@ -24,7 +24,7 @@
     "watch": "npm-run-all clean dev:watch",
     "dev:watch": "npm-run-all --parallel tsc-watch test-watch",
     "debug": "nodemon --inspect --watch src -e ts,ejs --exec npm run dev",
-    "start": "node --require dotenv-flow/config ."
+    "start": "node -r dotenv-flow/config -r ts-node/register -r tsconfig-paths/register ."
   },
   "nyc": {
     "extension": [
@@ -83,8 +83,10 @@
     "sinon-chai": "^3.3.0",
     "source-map-support": "^0.5.12",
     "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
     "tslint": "^5.18.0",
     "typedoc": "^0.14.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "typescript-tslint-plugin": "^0.5.3"
   }
 }

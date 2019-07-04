@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"mochaExplorer.files": "dist/test/**/*.spec.js",
+		"mochaExplorer.require": [
+			"ts-node/register",
+			"tsconfig-paths/register",
+			"source-map-support/register",
+			"dotenv-flow/config"
+		],
+		"typescript.disableAutomaticTypeAcquisition": true,
+		"typescript.experimental.useSeparateSyntaxServer": true,
+		"typescript.preferences.importModuleSpecifier": "non-relative",
+		"typescript.preferences.quoteStyle": "single",
+		"typescript.referencesCodeLens.enabled": true,
+		"typescript.suggest.completeFunctionCalls": true,
+		"debug.node.autoAttach": "on",
+		"debug.toolBarLocation": "docked",
+		"debug.enableAllHovers": true,
+		"typescript.tsdk": "node_modules\\typescript\\lib"
+	}
+}
