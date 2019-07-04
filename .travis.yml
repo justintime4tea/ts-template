@@ -5,4 +5,4 @@ services:
 before_install:
 - docker build -t justintime4tea/ts-template . -f Dockerfile
 script:
-- docker run justintime4tea/ts-template npm run test
+- docker run justintime4tea/ts-template npm run travis

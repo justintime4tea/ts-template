@@ -3,20 +3,20 @@ import * as chai from 'chai';
 import 'mocha';
 import 'sinon';
 import {default as sinonChai} from 'sinon-chai';
-import {HelloWorld} from '../src/main';
+import {Main} from '../src/main';
 
 chai.use(sinonChai);
 chai.should();
 chai.config.includeStack = true;
 
-describe('HelloWorld', () => {
-  let helloWorld: HelloWorld;
+describe('Main', () => {
+  let main: Main;
 
-  beforeEach(() => (helloWorld = new HelloWorld()));
+  beforeEach(() => (main = new Main()));
 
-  describe('#greet', () => {
+  describe('greet', () => {
     it('should greet person', () => {
-      const result = helloWorld.greet('John Doe');
+      const result = main.greet('John Doe');
       result.should.equal('Hello John Doe!');
     });
   });

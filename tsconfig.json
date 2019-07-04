@@ -3,24 +3,32 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "commonjs",
+    "plugins": [{
+      "name": "typescript-tslint-plugin"
+    }],
     "esModuleInterop": true,
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
     "experimentalDecorators": true,
     "declaration": true,
+    "declarationDir": "dist",
     "sourceMap": true,
     "declarationMap": true,
     "outDir": "dist",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
       "*": [
+        "*",
         "node_modules/*"
       ]
     }
   },
   "exclude": [
-    "dist",
+    "*.d.ts",
+    "*.spec.d.ts",
+    "**/*.d.ts",
+    "**/*.spec.d.ts",
     "node_modules"
   ]
 }

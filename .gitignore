@@ -1,7 +1,6 @@
 .nyc_output
 coverage
 node_modules
-.env-*
 docs/typedoc/*
 *.sh
 npm-debug.log
