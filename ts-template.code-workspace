@@ -5,6 +5,8 @@
 		}
 	],
 	"settings": {
+		"npm.autoDetect": "off",
+		"typescript.tsc.autoDetect": "off",
 		"mochaExplorer.files": "dist/test/**/*.spec.js",
 		"mochaExplorer.require": [
 			"ts-node/register",
