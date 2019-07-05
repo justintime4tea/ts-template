@@ -2,7 +2,7 @@
   "name": "ts-template",
   "version": "0.1.0",
   "description": "A Typescript template project for spinning up new projects quickly.",
-  "main": "dist/src/main.js",
+  "main": "dist/src/Main.js",
   "files": [
     "dist"
   ],
