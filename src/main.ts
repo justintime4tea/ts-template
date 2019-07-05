@@ -1,16 +1,18 @@
-export default class Main {
+export class Main {
   public static greet(name: string): string {
-    return `Hello ${name}!`;
+    return `Hello ${ name }!`;
   }
 
   public greet(name: string): string {
-    return `Hello ${name}!`;
+    return `Hello ${ name }!`;
   }
 }
 
 if (process.env.NODE_ENV === 'debug') {
   // Artificial wait to allow debugger to attach
   setTimeout(() => {
-    console.log(Main.greet('Bob'));
+    Main.greet('Bob');
   }, 1000);
 }
+
+Main.greet('Ok');

@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "src"
+		},
+		{
+			"path": "test"
 		}
 	],
 	"settings": {
@@ -14,15 +20,20 @@
 			"source-map-support/register",
 			"dotenv-flow/config"
 		],
-		"typescript.disableAutomaticTypeAcquisition": true,
+		"typescript.disableAutomaticTypeAcquisition": false,
 		"typescript.experimental.useSeparateSyntaxServer": true,
-		"typescript.preferences.importModuleSpecifier": "non-relative",
 		"typescript.preferences.quoteStyle": "single",
-		"typescript.referencesCodeLens.enabled": true,
+		"typescript.referencesCodeLens.enabled": false,
 		"typescript.suggest.completeFunctionCalls": true,
 		"debug.node.autoAttach": "on",
 		"debug.toolBarLocation": "docked",
 		"debug.enableAllHovers": true,
-		"typescript.tsdk": "node_modules\\typescript\\lib"
+		"typescript.tsdk": "node_modules\\typescript\\lib",
+		"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+		"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+		"typescript.format.insertSpaceAfterTypeAssertion": true,
+		"editor.wordWrapColumn": 120,
+		"prettier.tslintIntegration": true,
+		"typescript.implementationsCodeLens.enabled": true
 	}
 }

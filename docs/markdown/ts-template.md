@@ -8,5 +8,12 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [HelloWorld](./ts-template.helloworld.md) |  |
+|  [Bar](./ts-template.bar.md) |  |
+|  [Main](./ts-template.main.md) |  |
+
+## Type Aliases
+
+|  Type Alias | Description |
+|  --- | --- |
+|  [BarBaz](./ts-template.barbaz.md) |  |
 

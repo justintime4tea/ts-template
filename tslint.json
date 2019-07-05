@@ -3,6 +3,8 @@
   "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
+    "interface-over-type-literal": false,
+    "interface-name": true,
     "trailing-comma": [false],
     "quotemark": [true, "single", "jsx-double"]
   },
