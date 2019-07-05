@@ -1,4 +1,4 @@
-export class Main {
+export default class Main {
   public static greet(name: string): string {
     return `Hello ${ name }!`;
   }

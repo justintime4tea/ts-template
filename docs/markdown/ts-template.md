@@ -4,13 +4,6 @@
 
 ## ts-template package
 
-## Classes
-
-|  Class | Description |
-|  --- | --- |
-|  [Bar](./ts-template.bar.md) |  |
-|  [Main](./ts-template.main.md) |  |
-
 ## Type Aliases
 
 |  Type Alias | Description |

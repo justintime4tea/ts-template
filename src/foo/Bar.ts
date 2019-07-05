@@ -1,4 +1,4 @@
-export class Bar {
+export default class Bar {
   public static baz(num: number): void {
     // Random function
   }

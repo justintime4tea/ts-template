@@ -4,14 +4,6 @@
 
 ```ts
 
-// Warning: (ae-missing-release-tag) "Bar" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-// 
-// @public (undocumented)
-export class Bar {
-    // (undocumented)
-    static baz(num: number): void;
-}
-
 // Warning: (ae-missing-release-tag) "BarBaz" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 // 
 // @public (undocumented)
@@ -19,16 +11,6 @@ export type BarBaz = {
     thingy: string;
     otherThingy: number;
 };
-
-// Warning: (ae-missing-release-tag) "Main" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-// 
-// @public (undocumented)
-export class Main {
-    // (undocumented)
-    static greet(name: string): string;
-    // (undocumented)
-    greet(name: string): string;
-}
 
 
 // (No @packageDocumentation comment for this package)
