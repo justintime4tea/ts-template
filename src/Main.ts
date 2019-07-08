@@ -12,7 +12,5 @@ if (process.env.NODE_ENV === 'debug') {
   // Artificial wait to allow debugger to attach
   setTimeout(() => {
     Main.greet('Bob');
-  }, 1000);
+  }, 10000);
 }
-
-Main.greet('Ok');

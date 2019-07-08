@@ -13,6 +13,10 @@
 	"settings": {
 		"npm.autoDetect": "off",
 		"typescript.tsc.autoDetect": "off",
+		"typescript.preferences.importModuleSpecifier": "relative",
+		"mochaExplorer.env": {
+			"NODE_ENV": "test"
+		},
 		"mochaExplorer.files": "dist/test/**/*.spec.js",
 		"mochaExplorer.require": [
 			"ts-node/register",
@@ -26,7 +30,7 @@
 		"typescript.referencesCodeLens.enabled": false,
 		"typescript.suggest.completeFunctionCalls": true,
 		"debug.node.autoAttach": "on",
-		"debug.toolBarLocation": "docked",
+		"debug.toolBarLocation": "floating",
 		"debug.enableAllHovers": true,
 		"typescript.tsdk": "node_modules\\typescript\\lib",
 		"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
@@ -34,6 +38,9 @@
 		"typescript.format.insertSpaceAfterTypeAssertion": true,
 		"editor.wordWrapColumn": 120,
 		"prettier.tslintIntegration": true,
-		"typescript.implementationsCodeLens.enabled": true
+		"typescript.implementationsCodeLens.enabled": true,
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true
 	}
 }
